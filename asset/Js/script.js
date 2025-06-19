@@ -113,7 +113,12 @@ let saveurs = document.getElementById('menus_saveurs');
 let carte = document.getElementById('menu_carte');
 let boissons = document.getElementById('boissons');
 let dessert = document.getElementById('dessert');
-const HT = document.getElementById('HT');
+let effacer = document.getElementById('effacer');
+let final = document.getElementById('final');
+let HT = document.getElementById('HT');
+let TVA = document.getElementById('TVA');
+let TTC = document.getElementById('TTC');
+let total_H = 0;
 
 menu_s.addEventListener('click', () => {
     const Menu = saveurs.value;
@@ -122,9 +127,9 @@ menu_s.addEventListener('click', () => {
     total_m.innerHTML += "<li>";
     total_m.innerHTML += texteMenu;
     total_m.innerHTML += "</li>";
-    HT.innerHTML += "<li>";
-    HT.innerHTML += Menu;
-    HT.innerHTML += "</li>";
+    total_H= total_H + parseInt(Menu);
+    HT.innerHTML = total_H;
+    TVA.innerHTML = total_H * 0.055;
 
 });
 menu_c.addEventListener('click', () => {
@@ -134,10 +139,9 @@ menu_c.addEventListener('click', () => {
     total_c.innerHTML += "<li>";
     total_c.innerHTML += texteMenu;
     total_c.innerHTML += "</li>";
-    HT.innerHTML += "<li>";
-    HT.innerHTML += Menu;
-    HT.innerHTML += "</li>";
-
+    total_H = total_H + parseInt(Menu);
+    HT.innerHTML = total_H;
+    TVA.innerHTML = total_H * 0.055;
 });
 menu_b.addEventListener('click', () => {
     const Menu = boissons.value;
@@ -145,11 +149,10 @@ menu_b.addEventListener('click', () => {
 
     total_b.innerHTML += "<li>";
     total_b.innerHTML += texteMenu;
-    total_b.innerHTML += "</li>";
-    HT.innerHTML += "<li>";
-    HT.innerHTML += Menu;
-    HT.innerHTML += "</li>";
-
+    total_b.innerHTML += "</li>";;
+    total_H = total_H + parseInt(Menu);
+    HT.innerHTML = total_H;
+    TVA.innerHTML = total_H * 0.055;
 });
 menu_d.addEventListener('click', () => {
     const Menu = dessert.value;
@@ -158,7 +161,22 @@ menu_d.addEventListener('click', () => {
     total_d.innerHTML += "<li>";
     total_d.innerHTML += texteMenu;
     total_d.innerHTML += "</li>";
-    HT.innerHTML += "<li>";
-    HT.innerHTML += Menu;
-    HT.innerHTML += "</li>";
+    total_H = total_H + parseInt(Menu);
+    HT.innerHTML = total_H;
+    TVA.innerHTML = total_H * 0.055;
+});
+
+final.addEventListener('click', () => {
+    TTC.innerHTML = total_H + total_H * 0.055;
+});
+effacer.addEventListener('click', () => {
+
+    total_H = 0;
+    total_m.innerHTML = "";
+    total_c.innerHTML = "";
+    total_b.innerHTML = "";
+    total_d.innerHTML = "";
+    HT.innerHTML = "";
+    TVA.innerHTML = "";
+    TTC.innerHTML = "";
 });
