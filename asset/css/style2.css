@@ -444,6 +444,9 @@ h2{
     font-weight: bold;
     color: crimson;
 }
+.contact img{
+    border-radius: 50%;
+}
 #envoie{
     padding-bottom: 30px;
     width: 30%;
