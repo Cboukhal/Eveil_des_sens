@@ -43,6 +43,48 @@ header #logo{
     color: goldenrod;
     margin: 10px;
 }
+/* ---------------------------------*/
+nav ul li ul.sousmenu {
+  display: none;
+  position: absolute;
+  background-color: beige;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 10px 0;
+  margin-top: 15px;
+  z-index: 20;
+  border-radius: 5px;
+}
+
+/* Chaque sous-menu est vertical */
+nav ul li ul.sousmenu li {
+  padding: 10px 20px;
+  width: 180px;
+}
+
+/* Afficher le sous-menu au survol du parent */
+nav ul li:hover > ul.sousmenu {
+  display: block;
+}
+
+/* Positionner les sous-menus juste sous leur parent */
+nav ul {
+  position: relative;
+}
+
+/* Style liens du sous-menu */
+nav ul li ul.sousmenu li a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+/* Hover pour les sous-liens */
+nav ul li ul.sousmenu li a:hover {
+  background-color: goldenrod;
+  color: white;
+}
+/* ---------------------------------*/
 nav ul{
     display: flex;
     justify-content: space-evenly;
