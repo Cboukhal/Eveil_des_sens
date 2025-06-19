@@ -57,9 +57,9 @@
             <tr>
                 <td><b>Menu</b></td>
                 <td><select id="menus_saveurs" name="menus">
-                    <option value="saveurs">Menu Saveurs – 34€</option>
-                    <option value="degustation">Menu Dégustation – 49€</option>
-                    <option value="enfant">Menu Enfant – 12€</option>
+                    <option value="34">Menu Saveurs – 34€</option>
+                    <option value="49">Menu Dégustation – 49€</option>
+                    <option value="12">Menu Enfant – 12€</option>
                     
                     </select></td>
                 <td><input type="submit" value="Accepter" id="menu_s"></td>
@@ -67,11 +67,11 @@
             <tr>
                 <td><b>A la carte</b></td>
                 <td><select id="menu_carte" name="menus">
-                    <option value="Risotto ">Risotto aux champignons et parmesan – 18€</option>
-                    <option value="Magret">Magret de canard sauce fruits rouges – 22€</option>
-                    <option value="Burger">Burger maison au cantal – 16€</option>
-                    <option value="Lasagnes">Lasagnes végétariennes – 15€</option>
-                    <option value="Tartare">Tartare de saumon mangue-avocat – 20€</option>
+                    <option value="18 ">Risotto aux champignons et parmesan – 18€</option>
+                    <option value="22">Magret de canard sauce fruits rouges – 22€</option>
+                    <option value="16">Burger maison au cantal – 16€</option>
+                    <option value="15">Lasagnes végétariennes – 15€</option>
+                    <option value="20">Tartare de saumon mangue-avocat – 20€</option>
                     
                     </select></td>
                 <td><input type="submit" value="Accepter" id="menu_c"></td>
@@ -79,26 +79,59 @@
             <tr>
                 <td><b>Boissons</b></td>
                 <td><select id="boissons" name="menus">
-                    <option value="Eau ">Eau plate / gazeuse – 3€</option>
-                    <option value="Vin">Verre de vin rouge ou blanc – 5€</option>
-                    <option value="Burger">Burger maison au cantal – 16€</option>
-                    <option value="Bière">Bière artisanale – 6€</option>
-                    <option value="Cocktail ">Cocktail sans alcool – 5€</option>
-                    <option value="Espresso ">Espresso – 2€</option>
+                    <option value="3">Eau plate / gazeuse – 3€</option>
+                    <option value="5">Verre de vin rouge ou blanc – 5€</option>
+                    <option value="16">Burger maison au cantal – 16€</option>
+                    <option value="6">Bière artisanale – 6€</option>
+                    <option value="5 ">Cocktail sans alcool – 5€</option>
+                    <option value="2 ">Espresso – 2€</option>
                     
                     </select></td>
                 <td><input type="submit" value="Accepter" id="menu_b"></td>
             </tr>
             <tr>
                 <td><b>Dessert</b></td>
-                <td><select id="boissons" name="menus">
-                    <option value="Tarte ">Tarte tatin revisitée – 7€</option>
-                    <option value="Crème">Crème brûlée à la vanille – 6€</option>
-                    <option value="Mousse">Mousse au chocolat noir – 6€</option>
-                    <option value="Sorbet">Sorbet citron basilic – 5€</option>
-                    <option value="fromage ">Assiette de fromages – 7€</option>
+                <td><select id="dessert" name="menus">
+                    <option value="7 ">Tarte tatin revisitée – 7€</option>
+                    <option value="6">Crème brûlée à la vanille – 6€</option>
+                    <option value="6">Mousse au chocolat noir – 6€</option>
+                    <option value="5">Sorbet citron basilic – 5€</option>
+                    <option value="7 ">Assiette de fromages – 7€</option>
                     </select></td>
                 <td><input type="submit" value="Accepter" id="menu_d"></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>Total Menu : </div></td>
+                <td><ul id="total_m"></ul></td>
+            </tr>
+            <tr>
+                <td>Total de la Carte : </div></td>
+                <td><ul><div id="total_c"></div></ul></td>
+            </tr>
+            <tr>
+                <td>Total Boissons : </td>
+                <td><ul><div id="total_b"></div></ul></td>
+            </tr>
+            <tr>
+                <td>Total Dessert : </td>
+                <td><ul><div id="total_d"></div></ul></td>
+            </tr>
+            <tr>
+                    <td colspan="2"><input type="submit" value="Valider" id="final"></td>
+            </tr>
+            <tr>
+                <td>HT : </td>
+                <td><ul><div id="HT"></div></ul></td>
+            </tr>
+            <tr>
+                <td>TVA : </td>
+                <td><ul><div id="TVA"></div></ul></td>
+            </tr>
+            <tr>
+                <td>TTC : </td>
+                <td><ul><div id="TTC"></div></ul></td>
             </tr>
         </table>
         </section>
