@@ -376,15 +376,15 @@ h2{
     height: 140px;
     resize: none;
 }
-.reservation label{
+/* .reservation label{
     color: rosybrown;
     font-size: 1em;
-}
-.reservation label span{
+} */
+/* .reservation label span{
     font-size: 1.4em;
     font-weight: bold;
     color: crimson;
-}
+} */
 #envoie{
     padding-bottom: 30px;
     width: 30%;
@@ -435,7 +435,7 @@ h2{
     height: 140px;
     resize: none;
 }
-.contact label{
+/* .contact label{
     color: rosybrown;
     font-size: 1em;
 }
@@ -443,7 +443,7 @@ h2{
     font-size: 1.4em;
     font-weight: bold;
     color: crimson;
-}
+} */
 .contact img{
     border-radius: 50%;
 }
@@ -525,7 +525,27 @@ footer p{
         font-size: 3em;
         padding: 50px;
     }
-}
+    /* ------------------- */
+    .apropos,
+    .menus,
+    .equipe,
+    .reservation,
+    .contact {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .menu,
+    .bloc {
+        width: 100%;
+    }
+    .galerie-grid {
+    grid-template-columns: 1fr;
+    }
+    .reservation aside,
+    .contact aside {
+    width: 100%;
+    }
+    }
 
 
 /*-------------------------Restaurant----------------------*/
