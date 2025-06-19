@@ -40,23 +40,6 @@ $('.apropos').mouseleave(()=>{
     $('.texte').hide();
 })
 
-/*-------------------------------------menu--------------------------------------*/
-const btn = document.querySelectorAll(".menus .btn");
-const popup = document.querySelectorAll(".menus .popup");
-const fermer = document.querySelectorAll(".menus .close");
-
-
-for (let i = 0; i < btn.length; i++) {
-    btn[i].addEventListener('click', (event) => {
-        event.preventDefault();//est une méthode JavaScript utilisée pour empêcher le comportement par défaut d’un événement dans le navigateur.
-        popup[i].style.visibility = 'visible';
-    });
-    fermer[i].addEventListener('click', () => {
-        popup[i].style.visibility = 'hidden';
-    });
-}
-
-
 /*-------------------------------------articles--------------------------------------*/
 let articles = $('.blog .article');
 for(let article of articles){
