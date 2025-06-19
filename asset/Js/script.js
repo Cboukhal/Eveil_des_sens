@@ -103,3 +103,11 @@ const formr = document.getElementById('form-reservation');
                 formr.reset();
             }, 4000);
         });
+
+/*-------------------------Estimation-------------------------*/
+let menu_s = document.getElementById('menu_s');
+let menu_c = document.getElementById('menu_c');
+let menu_b = document.getElementById('menu_b');
+let menu_d = document.getElementById('menu_d');
+
+console.log(menu_s);

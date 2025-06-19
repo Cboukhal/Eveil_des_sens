@@ -491,14 +491,15 @@ footer p{
 /* Texte du membre */
 .chef, .patissier, .directeur, .sommelier {
     flex: 1;
-    text-align: left;
+    text-align: center;
     padding: 10px;
     font-size: 1em;
     color: #333;
     line-height: 1.6;
-    
 }
-
+ul li{
+    list-style: none;
+}
 /*-------------------------Reservation----------------------*/
 .overlay {
             position: absolute;
