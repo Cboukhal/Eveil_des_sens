@@ -64,28 +64,19 @@ for(let champ of champs){
     })
 }
 
-// const form = document.querySelector('.contact form');
-// const reussi = document.querySelector('.reussite');
-// form.addEventListener('submit',(element)=>{
-//         element.preventDefault();
-//         reussi.style.display = "block";
-//         setTimeout(()=>{
-//             reussi.style.display = "none";
-//         },5000)
-//     })
-
 /*-------------------------------------Reservation--------------------------------------*/
-// const formr = document.getElementById('form-reservation');
-//         const popupr = document.getElementById('popup');
+const formr = document.getElementById('form-reservation');
+        const popupr = document.getElementById('popup');
 
-//         formr.addEventListener('submit', function(event) {
-//             event.preventDefault();
-//             popupr.style.display = 'block';
-//             setTimeout(() => {
-//                 popupr.style.display = 'none';
-//                 formr.reset();
-//             }, 4000);
-//         });
+        formr.addEventListener('submit', function(event) {
+            event.preventDefault();
+            popupr.style.display = 'block';
+            // alert("ok");
+            setTimeout(() => {
+                popupr.style.display = 'none';
+                formr.reset();
+            }, 4000);
+        });
 
 /*-------------------------Estimation-------------------------*/
 let menu_s = document.getElementById('menu_s');
