@@ -65,10 +65,12 @@ for(let champ of champs){
 }
 
 /*-------------------------------------Reservation--------------------------------------*/
-const formr = document.getElementById('form-reservation');
+function reservation(){
+    const formr = document.getElementById('form-reservation');
         const popupr = document.getElementById('popup');
 
-        formr.addEventListener('submit', function(event) {
+        if(formr){
+            formr.addEventListener('submit', function(event) {
             event.preventDefault();
             popupr.style.display = 'block';
             // alert("ok");
@@ -77,6 +79,9 @@ const formr = document.getElementById('form-reservation');
                 formr.reset();
             }, 4000);
         });
+        }
+        
+}
 
 /*-------------------------Estimation-------------------------*/
 let menu_s = document.getElementById('menu_s');
@@ -94,7 +99,8 @@ let TVA = document.getElementById('TVA');
 let TTC = document.getElementById('TTC');
 let total_H = 0;
 
-menu_s.addEventListener('click', () => {
+if(menu_s){
+    menu_s.addEventListener('click', () => {
     const Menu = saveurs.value;
     const texteMenu = saveurs.options[saveurs.selectedIndex].text;
 
@@ -105,8 +111,10 @@ menu_s.addEventListener('click', () => {
     HT.innerHTML = total_H;
     TVA.innerHTML = total_H * 0.055;
 
-});
-menu_c.addEventListener('click', () => {
+})
+}
+if(menu_c){
+    menu_c.addEventListener('click', () => {
     const Menu = carte.value;
     const texteMenu = carte.options[carte.selectedIndex].text;
 
@@ -116,8 +124,10 @@ menu_c.addEventListener('click', () => {
     total_H = total_H + parseInt(Menu);
     HT.innerHTML = total_H;
     TVA.innerHTML = total_H * 0.055;
-});
-menu_b.addEventListener('click', () => {
+})
+}
+if(menu_b){
+    menu_b.addEventListener('click', () => {
     const Menu = boissons.value;
     const texteMenu = boissons.options[boissons.selectedIndex].text;
 
@@ -127,8 +137,10 @@ menu_b.addEventListener('click', () => {
     total_H = total_H + parseInt(Menu);
     HT.innerHTML = total_H;
     TVA.innerHTML = total_H * 0.055;
-});
-menu_d.addEventListener('click', () => {
+})
+}
+if(menu_d){
+    menu_d.addEventListener('click', () => {
     const Menu = dessert.value;
     const texteMenu = dessert.options[dessert.selectedIndex].text;
 
@@ -138,12 +150,16 @@ menu_d.addEventListener('click', () => {
     total_H = total_H + parseInt(Menu);
     HT.innerHTML = total_H;
     TVA.innerHTML = total_H * 0.055;
-});
+})
+}
 
-final.addEventListener('click', () => {
+if(final){
+    final.addEventListener('click', () => {
     TTC.innerHTML = total_H + total_H * 0.055;
-});
-effacer.addEventListener('click', () => {
+})
+}
+if(effacer){
+    effacer.addEventListener('click', () => {
 
     total_H = 0;
     total_m.innerHTML = "";
@@ -153,4 +169,8 @@ effacer.addEventListener('click', () => {
     HT.innerHTML = "";
     TVA.innerHTML = "";
     TTC.innerHTML = "";
-});
+})
+}
+
+
+reservation();
