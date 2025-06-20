@@ -435,17 +435,11 @@ h2{
     height: 140px;
     resize: none;
 }
-/* .contact label{
-    color: rosybrown;
-    font-size: 1em;
-}
-.contact label span{
-    font-size: 1.4em;
-    font-weight: bold;
-    color: crimson;
-} */
 .contact img{
     border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 #envoie{
     padding-bottom: 30px;
@@ -545,8 +539,16 @@ footer p{
     .contact aside {
     width: 100%;
     }
+    .contact td {
+        text-align: center;
+        padding: 10px 0;
     }
 
+    .contact img {
+        max-width: 80px;
+        margin: 0 auto;
+    }
+}
 
 /*-------------------------Restaurant----------------------*/
 .equipe,
