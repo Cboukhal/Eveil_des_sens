@@ -1,0 +1,152 @@
+<?php
+    session_start();
+    ?>
+<!-- ////////////////////////////////////////////////////////// -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site gastronomique">
+    <meta name="keywords" content="restaurant,chic,français">
+    <meta name="author" content="Eveil des sens">
+    <link rel="stylesheet" href="./asset/css/style2.css">
+    <title>La Carte & Menus</title>
+    <link rel="icon" type="image/favicon" href="./asset/image/logo.png">
+</head>
+<body>
+    <?php
+        include "./includes/header.php";
+    ?>
+    <main>
+        <section class="baniere">
+            <div id="slider">
+                <span id="sgauche">&lt;</span>
+                <img src="./asset/image/s-j-p-&-r-s.jpg" alt="saint-jack">
+                <img src="./asset/image/filet-de-boeuf.png" alt="filet-de-boeuf">
+                <img src="./asset/image/magret-canard.png" alt="magret-canard">
+                <img src="./asset/image/tartare-saumon.png" alt="tartare-saumon">
+                <span id="sdroite">&gt;</span>
+            </div>
+            <div class="text">
+                <h1>GALERIE</h1>
+                <p>Dans se lieu, vous éveillerez enfin votre 7éme sens</p>
+                <a href="./Contact.php" class="btn" aria-label="Aller à la page contact">Contactez-nous</a>
+                <br>
+                <br><a href="./reservation.php" aria-label="Réserver une table" class="btn">Réserver</a>
+            </div>
+        </section>
+        <div class="decal"></div>
+        <section class="galerie">
+        <h2>Photos du Restaurant</h2>
+        <div class="galerie-grid">
+            <div class="galerie-item"><img src="./asset/image/supreme.png" alt="Plat gastronomique"></div>
+            <div class="galerie-item"><img src="./asset/image/restau.webp" alt="Salle du restaurant"></div>
+            <div class="galerie-item"><img src="./asset/image/cuisinier.png" alt="Equipe en cuisine"></div>
+            <div class="galerie-item"><img src="./asset/image/tartare-saumon.png" alt="Entrée raffinée"></div>
+            <div class="galerie-item"><img src="./asset/image/directeur.jpg" alt="Serveur souriant"></div>
+            <div class="galerie-item"><img src="./asset/image/crème.png" alt="Dessert d'exception"></div>
+            <div class="video-galerie">
+                <video autoplay muted loop playsinline>
+                <source src="./asset/video/33256-396487978_tiny.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas les vidéos HTML5.
+                </video>
+            <div class="overlay-video">
+            </div>
+        </section>
+        <h2>Estimation</h2>
+        <section class="estimation">
+             <table>
+            <tr>
+                <td><b>Menu</b></td>
+                <td><select id="menus_saveurs" name="menus">
+                    <option value="34">Menu Saveurs – 34€</option>
+                    <option value="49">Menu Dégustation – 49€</option>
+                    <option value="12">Menu Enfant – 12€</option>
+                    
+                    </select></td>
+                <td><input type="submit" value="Accepter" id="menu_s"></td>
+            </tr>
+            <tr>
+                <td><b>A la carte</b></td>
+                <td><select id="menu_carte" name="menus">
+                    <option value="18 ">Risotto aux champignons et parmesan – 18€</option>
+                    <option value="22">Magret de canard sauce fruits rouges – 22€</option>
+                    <option value="16">Burger maison au cantal – 16€</option>
+                    <option value="15">Lasagnes végétariennes – 15€</option>
+                    <option value="20">Tartare de saumon mangue-avocat – 20€</option>
+                    
+                    </select></td>
+                <td><input type="submit" value="Accepter" id="menu_c"></td>
+            </tr>
+            <tr>
+                <td><b>Boissons</b></td>
+                <td><select id="boissons" name="menus">
+                    <option value="3">Eau plate / gazeuse – 3€</option>
+                    <option value="5">Verre de vin rouge ou blanc – 5€</option>
+                    <option value="16">Burger maison au cantal – 16€</option>
+                    <option value="6">Bière artisanale – 6€</option>
+                    <option value="5 ">Cocktail sans alcool – 5€</option>
+                    <option value="2 ">Espresso – 2€</option>
+                    
+                    </select></td>
+                <td><input type="submit" value="Accepter" id="menu_b"></td>
+            </tr>
+            <tr>
+                <td><b>Dessert</b></td>
+                <td><select id="dessert" name="menus">
+                    <option value="7 ">Tarte tatin revisitée – 7€</option>
+                    <option value="6">Crème brûlée à la vanille – 6€</option>
+                    <option value="6">Mousse au chocolat noir – 6€</option>
+                    <option value="5">Sorbet citron basilic – 5€</option>
+                    <option value="7 ">Assiette de fromages – 7€</option>
+                    </select></td>
+                <td><input type="submit" value="Accepter" id="menu_d"></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>Total Menu : </div></td>
+                <td><ul id="total_m"></ul></td>
+            </tr>
+            <tr>
+                <td>Total de la Carte : </div></td>
+                <td><ul><div id="total_c"></div></ul></td>
+            </tr>
+            <tr>
+                <td>Total Boissons : </td>
+                <td><ul><div id="total_b"></div></ul></td>
+            </tr>
+            <tr>
+                <td>Total Dessert : </td>
+                <td><ul><div id="total_d"></div></ul></td>
+            </tr>
+            <tr>
+                    <td colspan="2"><input type="submit" value="Valider" id="final"></td>
+            </tr>
+            <tr>
+                <td>HT : </td>
+                <td><ul><div id="HT"></div></ul></td>
+            </tr>
+            <tr>
+                <td>TVA : </td>
+                <td><ul><div id="TVA"></div></ul></td>
+            </tr>
+            <tr>
+                <td>TTC : </td>
+                <td><ul><div id="TTC"></div></ul></td>
+            </tr>
+            <tr>
+                    <td colspan="2"><input type="submit" value="effacer" id="effacer"></td>
+            </tr>
+        </table>
+        </section>
+    </main>
+    <?php
+        include "./includes/footer.php";
+    ?>
+    
+    <script src="./asset/Js/jquery-3.7.1.min.js"></script>
+    <script src="./asset/Js/script.js"></script>
+</body>
+</html>

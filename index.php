@@ -1,0 +1,137 @@
+<?php
+    session_start();
+    ?>
+<!-- ////////////////////////////////////////////////////////// -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site gastronomique">
+    <meta name="keywords" content="restaurant,chic,français">
+    <meta name="author" content="Eveil des sens">
+    <link rel="stylesheet" href="./asset/css/style2.css">
+    <title>Eveil des sens</title>
+    <link rel="icon" type="image/favicon" href="./asset/image/logo.png">
+</head>
+<body>
+    <?php
+        include "./includes/header.php";
+    ?>
+    <main>
+        <section class="baniere">
+            <div id="slider">
+                <span id="sgauche">&lt;</span>
+                <img src="./asset/image/s-j-p-&-r-s.jpg" alt="saint-jack">
+                <img src="./asset/image/filet-de-boeuf.png" alt="filet-de-boeuf">
+                <img src="./asset/image/magret-canard.png" alt="magret-canard">
+                <img src="./asset/image/tartare-saumon.png" alt="tartare-saumon">
+                <span id="sdroite">&gt;</span>
+            </div>
+            <div class="text">
+                <h1>Accueil</h1>
+                <p>Dans se lieu, vous éveillerez enfin votre 7éme sens</p>
+                <a href="./Contact.php" class="btn" aria-label="Aller à la page contact">Contactez-nous</a>
+                <br>
+                <br><a href="./reservation.php" aria-label="Réserver une table" class="btn">Réserver</a>
+            </div>
+        </section>
+        <div class="decal"></div>
+        <h2>Histoire</h2>
+        <section class="apropos">
+            <aside class="image">
+                <img src="./asset/image/cuisine.png" alt="cuisine">
+            </aside>
+            <aside class="texte">
+                <h3>Notre histoire</h3>
+                <p>
+                    Depuis son installation rue de Rivoli en 1835, l'Eveil des sens a connu de nombreuses opérations d’embellissement. La première, entre 1905 et 1907, sous la conduite de l’architecte Henri Nénot, voit l’intervention du peintre académique Théophile Poilpot dont les deux fresques, exécutées dans un esprit Commedia dell’arte, ornent encore la salle du restaurant l'Eveil des sens Alain Ducasse.
+                </p><br><br>
+                <a href="./restaurant.php" class="btn">En savoir +</a>
+            </aside>
+        </section>
+        <h2>La Carte & Menus</h2>
+        <section class="menus">
+            <aside class="menu">
+                <img src="./asset/image/filet-dorade.png" alt="/filet-dorade">
+                <h3>Menu Saveurs</h3>
+                <a href="./menu_saveur.php" class="btn">En savoir plus</a>
+            </aside>
+            <aside class="menu">
+                <img src="./asset/image/Foie gras -figue fleur.jpg" alt="Foie gras -figue fleur">
+                <h3>Menu Dégustation</h3>
+                <a href="./menu_degustation.php" class="btn">En savoir plus</a>
+            </aside>
+            <aside class="menu">
+                <img src="./asset/image/nugget-frites.avif" alt="nugget-frites">
+                <h3>Menu Enfant</h3>
+                <a href="./menu_enfant.php" class="btn">En savoir plus</a>
+            </aside>
+        </section>
+        <h2>Galerie</h2>
+        <section class="galerie">
+        <div class="galerie-grid">
+            <div class="galerie-item">
+            <img src="./asset/image/supreme.png" alt="Plat gastronomique">
+            </div>
+            <div class="galerie-item">
+            <img src="./asset/image/restau.webp" alt="Salle du restaurant">
+            </div>
+            <div class="galerie-item">
+            <img src="./asset/image/chef.jpg" alt="Chef en cuisine">
+            </div>
+            <div class="galerie-item">
+            <img src="./asset/image/Foie gras -figue fleur.jpg" alt="Entrée dressée">
+            </div>
+            <div class="galerie-item">
+            <img src="./asset/image/directeur.jpg" alt="Serveur souriant">
+            </div>
+            <div class="galerie-item">
+            <img src="./asset/image/crème.png" alt="Dessert raffiné">
+            </div>
+        </div>
+        <div class="galerie-btn">
+            <a href="./galerie.php" class="btn">Voir toute la galerie</a>
+        </div>
+        </section>
+        <h2>Réservation</h2>
+        <section class="reservation">
+                <table cellspacing="15">
+                        <tr>
+                           <td><strong>HorairesDîner :</strong> du lundi au vendredi de 19h à 21h30</td>
+                           <td><strong>Téléphone :</strong> 01 XX XX XX XX</td>
+                           <td><strong>Email :</strong> contact@eveildessens.fr</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><a href="./reservation.php" class="btn">Réservation</a></td>
+                        </tr>
+                </table>
+                <div class="reussite">
+                    <p>Votre message a bien été envoyé.</p>
+                </div>
+            </aside>
+        </section>
+        <h2>Contact</h2>
+        <section class="contact">
+            <aside>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5249.250658405498!2d2.325643677051217!3d48.86535457133304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2ddfdfc7db%3A0x9c305ca4b15d6eb3!2s228%20Rue%20de%20Rivoli%2C%2075001%20Paris!5e0!3m2!1sfr!2sfr!4v1750335246310!5m2!1sfr!2sfr" ></iframe></aside>
+            <aside>
+                <table cellspacing="15">
+                    <form action="">
+                        <tr>
+                           <td><h3>Rejoignez-Nous</h3></td>
+                           <td><a href="./Contact.php" aria-label="Rejoignez-nous sur Facebook"><img src="./asset/image/facebook.png" alt="facebook"></a></td>
+                           <td><a href="./Contact.php" aria-label="Rejoignez-nous sur Instagram"><img src="./asset/image/insta.png" alt="insta"></a></td>
+                        </tr>
+                    </form>
+                </table>
+            </aside>
+        </section>
+    </main>
+    <?php
+        include "./includes/footer.php";
+    ?>  
+    <script src="./asset/Js/jquery-3.7.1.min.js"></script>
+    <script src="./asset/Js/script.js"></script>
+</body>
+</html>
