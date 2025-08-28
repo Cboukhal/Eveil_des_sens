@@ -1,0 +1,137 @@
+<?php
+    session_start();
+    ?>
+<!-- ////////////////////////////////////////////////////////// -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site gastronomique">
+    <meta name="keywords" content="restaurant,chic,français">
+    <meta name="author" content="Eveil des sens">
+    <link rel="stylesheet" href="./asset/css/style2.css">
+    <title>La Carte & Menus</title>
+    <link rel="icon" type="image/favicon" href="./asset/image/logo.png">
+</head>
+<body>
+    <?php
+        include "./includes/header.php";
+    ?>
+    <main>
+        <section class="baniere">
+            <div id="slider">
+                <span id="sgauche">&lt;</span>
+                <img src="./asset/image/s-j-p-&-r-s.jpg" alt="saint-jack">
+                <img src="./asset/image/filet-de-boeuf.png" alt="filet-de-boeuf">
+                <img src="./asset/image/magret-canard.png" alt="magret-canard">
+                <img src="./asset/image/tartare-saumon.png" alt="tartare-saumon">
+                <span id="sdroite">&gt;</span>
+            </div>
+            <div class="text">
+                <h1>Le Menu et la Carte</h1>
+                <p>Dans se lieu, vous éveillerez enfin votre 7éme sens</p>
+                <a href="./Contact.php" class="btn" aria-label="Aller à la page contact">Contactez-nous</a>
+                <br>
+                <br><a href="./reservation.php" aria-label="Réserver une table" class="btn">Réserver</a>
+            </div>
+        </section>
+        <div class="decal"></div>
+        <h2>Contenu des menus.</h2>
+        <section class="equipe">
+                <h3 id="M_S">Menu Saveurs – 34€</h3>
+                <div class="bloc bloc1">
+                <aside class="image">
+                <img src="./asset/image/supreme.png" alt="Suprême de volaille aux morilles" id="saveurs">
+                </aside>
+                <aside class="chef">
+                    <ul>Entrée au choix :
+                        <li>Velouté de potimarron et noisettes</li>
+                        <li>Carpaccio de bœuf aux copeaux de parmesan</li>
+                    </ul>
+                    <ul>Plat au choix :
+                        <li>Filet de dorade, purée de patate douce</li>
+                        <li>Suprême de volaille aux morilles</li>
+                    </ul>
+                    <ul>Dessert :
+                        <li>Moelleux au chocolat cœur fondant</li>
+                    </ul>
+                </aside></div>
+                <h3 id="M_D">Menu Dégustation – 49€</h3>
+                <aside class="bloc"><aside class="image">
+                    <img src="./asset/image/s-j-p-&-r-s.jpg" alt="saint-jack" id="degustation">
+                    </aside>
+                    <aside class="patissier">
+                        <ul>(5 services)
+                            <li>Amuse-bouche du chef</li>
+                            <li>Foie gras maison et chutney de figues</li>
+                            <li>Saint-Jacques poêlées et risotto safrané</li>
+                            <li>Filet de bœuf, sauce truffe</li>
+                            <li>Assiette de fromages affinés</li>
+                            <li>Dessert au choix</li>
+                        </ul>
+                    </aside></aside>
+                    
+                <h3 id="M_E">Menu Enfant – 12€</h3>
+                <aside class="bloc bloc1"><aside class="image">
+                <img src="./asset/image/nugget-frites.avif" alt="nugget-frites" id="enfant">
+                </aside>
+                <aside class="directeur">
+                    <ul>
+                        <li>Nuggets maison + frites ou mini steak haché</li>
+                        <li>Compote ou glace vanille</li>
+                        <li>Sirop à l’eau ou jus de fruit</li>
+                    </ul>
+                </aside></aside>
+                
+                <h3 id="M_A">À la carte</h3>
+                <aside class="bloc"><aside class="image">
+                <img src="./asset/image/tartare-saumon.png" alt="tartare-saumon" id="carte">
+                </aside>
+                <aside class="sommelier">
+                    <ul>
+                        <li>Risotto aux champignons et parmesan – 18€</li>
+                        <li>Magret de canard sauce fruits rouges – 22€ </li>
+                        <li>Burger maison au cantal – 16€</li>
+                        <li>Lasagnes végétariennes – 15€</li>
+                        <li>Tartare de saumon mangue-avocat – 20€</li>
+                    </ul>
+                </aside></aside>
+
+                <h3 id="M_B">Boissons</h3>
+                <aside class="bloc bloc1"><aside class="image">
+                <img src="./asset/image/vin.png" alt="vin" id="Boissons">
+                </aside>
+                <aside class="directeur">
+                    <ul>
+                        <li>Eau plate / gazeuse – 3€</li>
+                        <li>Verre de vin rouge ou blanc – 5€</li>
+                        <li>Bière artisanale – 6€</li>
+                        <li>Cocktail sans alcool – 5€</li>
+                        <li>Espresso – 2€</li>
+                    </ul>
+                </aside></aside>
+
+                <h3 id="D_E">Desserts</h3>
+                <aside class="bloc"><aside class="image">
+                <img src="./asset/image/crème.png" alt="crème vanille" id="Dessert">
+                </aside>
+                <aside class="sommelier">
+                    <ul>
+                        <li>Tarte tatin revisitée – 7€</li>
+                        <li>Crème brûlée à la vanille – 6€</li>
+                        <li>Mousse au chocolat noir – 6€</li>
+                        <li>Sorbet citron basilic – 5€</li>
+                        <li>Assiette de fromages – 7€</li>
+                    </ul>
+                </aside></aside>
+        </section>
+    </main>
+    <?php
+        include "./includes/footer.php";
+    ?>
+    
+    <script src="./asset/Js/jquery-3.7.1.min.js"></script>
+    <script src="./asset/Js/script.js"></script>
+</body>
+</html>
