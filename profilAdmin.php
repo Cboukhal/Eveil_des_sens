@@ -137,6 +137,7 @@ if(!empty($_POST["delete"])) {
         $errorFiles = "<span style='color:red'>Erreur lors de la suppression du compte.</span>";
     }
 }
+<<<<<<< HEAD
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 // --- Suppression users---
@@ -346,6 +347,8 @@ if (isset($_POST['modifier_dessert']))
         'id' => $id
     ]);
 }
+=======
+>>>>>>> 96fcbe94d3ad192a5e23d5dda07049983ac8c846
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -435,6 +438,7 @@ if (isset($_POST['modifier_dessert']))
                 </tr>
             </table>
         </form>
+<<<<<<< HEAD
         <!-- users -->
         <div class="liste_user">
             <h2>Liste Users</h2>
@@ -675,6 +679,8 @@ if (isset($_POST['modifier_dessert']))
                 </table>
             </form>
         </div>
+=======
+>>>>>>> 96fcbe94d3ad192a5e23d5dda07049983ac8c846
     </main>
     <?php
         include "./includes/footer.php";

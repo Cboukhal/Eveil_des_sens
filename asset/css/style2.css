@@ -902,6 +902,7 @@ table.historique p {
     text-align: center;
     font-weight: 500;
     margin: 15px 0;
+<<<<<<< HEAD
 }
 
 /* user liste  */
@@ -954,4 +955,6 @@ table.historique p {
 /* Réinitialisation des petits formulaires dans la table */
 .liste_user table form {
   all: unset;
+=======
+>>>>>>> 96fcbe94d3ad192a5e23d5dda07049983ac8c846
 }

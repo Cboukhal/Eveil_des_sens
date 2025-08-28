@@ -242,6 +242,7 @@ if(!empty($_POST["delete"])) {
                     <th>Supprimer</th>
                 </tr>
                 <?php
+<<<<<<< HEAD
                     include_once "./includes/connexionbdd.php";
                      // On joint users si l'utilisateur existe
                     $sql = "SELECT r.id AS resa_id, r.nom AS resa_nom, r.email AS resa_email, r.telephone AS resa_tel, 
@@ -291,6 +292,58 @@ if(!empty($_POST["delete"])) {
                             </td>";
                         echo "</tr>";
                     }
+=======
+                include_once "./includes/connexionbdd.php";
+
+                // On joint users si l'utilisateur existe
+                $sql = "SELECT r.id AS resa_id, r.nom AS resa_nom, r.email AS resa_email, r.telephone AS resa_tel, 
+            r.date_resa, r.heure, r.nb_personnes,
+            u.id AS user_id, u.prenom, u.nom, u.mail, u.telephone AS user_tel, u.date_inscription
+        FROM reservations r
+        LEFT JOIN users u ON r.user_id = u.id
+        WHERE r.user_id = :user_id OR (r.user_id IS NULL AND r.email = :user_email)
+        ORDER BY r.date_resa DESC, r.heure DESC";
+
+$stmt = $connexion->prepare($sql);
+$stmt->bindValue(":user_id", $_SESSION["id"], PDO::PARAM_INT);
+$stmt->bindValue(":user_email", $_SESSION["mail"], PDO::PARAM_STR);
+$stmt->execute();
+
+foreach($stmt->fetchAll() as $resa){
+    // Le reste du code reste identique
+    echo "<tr>";
+    echo "<td>".$resa['resa_id']."</td>";
+
+    // Si l'utilisateur est enregistré, on affiche ses infos
+    if(!empty($resa['user_id'])){
+        echo "<td>".htmlspecialchars($resa['prenom']." ".$resa['nom'])."</td>";
+        echo "<td>".htmlspecialchars($resa['mail'])."</td>";
+        echo "<td>".htmlspecialchars($resa['user_tel'])."</td>";
+        echo "<td>".htmlspecialchars($resa['date_resa'])."</td>";
+        echo "<td>".htmlspecialchars($resa['heure'])."</td>";
+        echo "<td>".htmlspecialchars($resa['nb_personnes'])."</td>";
+        echo "<td>".htmlspecialchars($resa['date_inscription'])."</td>";
+    } else {
+        // Sinon on affiche les infos stockées directement dans réservation
+        echo "<td>".htmlspecialchars($resa['resa_nom'])."</td>";
+        echo "<td>".htmlspecialchars($resa['resa_email'])."</td>";
+        echo "<td>".htmlspecialchars($resa['resa_tel'])."</td>";
+        echo "<td>".htmlspecialchars($resa['date_resa'])."</td>";
+        echo "<td>".htmlspecialchars($resa['heure'])."</td>";
+        echo "<td>".htmlspecialchars($resa['nb_personnes'])."</td>";
+        echo "<td>-</td>";
+    }
+
+    // Bouton suppression
+    echo "<td>
+            <form action='' method='POST' style='all:unset'>
+                <input type='hidden' name='id' value='".$resa['resa_id']."'>
+                <input type='submit' value='Supprimer' name='supprimerResa' class='btn refuser'>
+            </form>
+        </td>";
+    echo "</tr>";
+}
+>>>>>>> 96fcbe94d3ad192a5e23d5dda07049983ac8c846
                 ?>
             </table>
 

@@ -83,6 +83,7 @@
                         <li>Sirop à l’eau ou jus de fruit</li>
                     </ul>
                 </aside></aside>
+<<<<<<< HEAD
 
                 <h3 id="M_A">À la carte</h3>
                 <aside class="bloc">
@@ -106,6 +107,22 @@
                         </ul>
                     </aside>
                 </aside>
+=======
+                
+                <h3 id="M_A">À la carte</h3>
+                <aside class="bloc"><aside class="image">
+                <img src="./asset/image/tartare-saumon.png" alt="tartare-saumon" id="carte">
+                </aside>
+                <aside class="sommelier">
+                    <ul>
+                        <li>Risotto aux champignons et parmesan – 18€</li>
+                        <li>Magret de canard sauce fruits rouges – 22€ </li>
+                        <li>Burger maison au cantal – 16€</li>
+                        <li>Lasagnes végétariennes – 15€</li>
+                        <li>Tartare de saumon mangue-avocat – 20€</li>
+                    </ul>
+                </aside></aside>
+>>>>>>> 96fcbe94d3ad192a5e23d5dda07049983ac8c846
 
                 <h3 id="M_B">Boissons</h3>
                 <aside class="bloc bloc1"><aside class="image">
@@ -113,6 +130,7 @@
                 </aside>
                 <aside class="directeur">
                     <ul>
+<<<<<<< HEAD
                         <?php
                                 include_once "./includes/connexionbdd.php";
                                 $sql = "SELECT * FROM boissons";
@@ -125,6 +143,13 @@
                                     echo number_format($carte['prix'], 2, ',', ' ') . "€</li>";
                                 }
                             ?>
+=======
+                        <li>Eau plate / gazeuse – 3€</li>
+                        <li>Verre de vin rouge ou blanc – 5€</li>
+                        <li>Bière artisanale – 6€</li>
+                        <li>Cocktail sans alcool – 5€</li>
+                        <li>Espresso – 2€</li>
+>>>>>>> 96fcbe94d3ad192a5e23d5dda07049983ac8c846
                     </ul>
                 </aside></aside>
 
@@ -134,6 +159,7 @@
                 </aside>
                 <aside class="sommelier">
                     <ul>
+<<<<<<< HEAD
                         <?php
                                 include_once "./includes/connexionbdd.php";
                                 $sql = "SELECT * FROM desserts";
@@ -146,6 +172,13 @@
                                     echo number_format($carte['prix'], 2, ',', ' ') . "€</li>";
                                 }
                             ?>
+=======
+                        <li>Tarte tatin revisitée – 7€</li>
+                        <li>Crème brûlée à la vanille – 6€</li>
+                        <li>Mousse au chocolat noir – 6€</li>
+                        <li>Sorbet citron basilic – 5€</li>
+                        <li>Assiette de fromages – 7€</li>
+>>>>>>> 96fcbe94d3ad192a5e23d5dda07049983ac8c846
                     </ul>
                 </aside></aside>
         </section>
